@@ -16,9 +16,9 @@ y = np.array([[25],[25],[25],[25],[25]])
 model = Sequential()
 
 model.add(Dense(2, input_dim=2))
-model.add(Activation('sigmoid'))
+model.add(Activation('softmax'))
 model.add(Dense(1))
-model.add(Activation('sigmoid'))
+model.add(Activation('softmax'))
 
 sgd = SGD(lr=0.1)
 model.compile(loss='mean_squared_error', optimizer=sgd)
